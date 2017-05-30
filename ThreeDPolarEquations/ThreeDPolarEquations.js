@@ -9,7 +9,7 @@ function setup() {
   radius = height * 0.45;
   theta = 0;
   theta_velocity = 0;
-  theta_acceleration = 0.00001;
+  theta_acceleration = 0.000001;
   perspective(60/180*PI, width/height, cameraZ *0.1, cameraZ*10);
   //background(200);
 }
@@ -23,7 +23,8 @@ function draw() {
   //var y1 = (mouseY/2)^2;
   orbitControl();
   translate(x, y);
-  ellipsoid(x, y, z);
+  ellipseMode(CENTER);
+  ellipsoid(20, 20, 40);
   //point(x1, y1);
   theta_velocity += theta_acceleration;
   theta += theta_velocity;
